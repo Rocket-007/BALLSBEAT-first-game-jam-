@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ehnnn-Ehnnnn-sound-effect.mp3-2f5815c288e7b4058c45f8254394a74e.mp3str"
+
+[deps]
+
+source_file="res://sounds/Ehnnn-Ehnnnn-sound-effect.mp3"
+dest_files=[ "res://.import/Ehnnn-Ehnnnn-sound-effect.mp3-2f5815c288e7b4058c45f8254394a74e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

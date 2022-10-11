@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://filetext.gd" type="Script" id=1]
+[ext_resource path="res://Peach Days.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://african-wildlife-sunset-with-giraffe-birds-silhouette_104785-1063.jpg" type="Texture" id=3]
+[ext_resource path="res://styling/betterButtonsPressed.tres" type="StyleBox" id=4]
+[ext_resource path="res://styling/betterButtons.tres" type="StyleBox" id=5]
+[ext_resource path="res://styling/betterButtonsFocus.tres" type="StyleBox" id=6]
+[ext_resource path="res://sounds/Ehnnn-Ehnnnn-sound-effect.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Scripts/AudioStreamPlayer.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 2 )
+
+[node name="saveTEXT" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.980392, 0.505882, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 552.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="textshower" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 128.0
+margin_right = 304.0
+margin_bottom = 208.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="savebutton" type="Button" parent="."]
+margin_left = 144.0
+margin_top = 368.0
+margin_right = 432.0
+margin_bottom = 488.0
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
+text = "save"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="loadbutton" type="Button" parent="."]
+margin_left = 144.0
+margin_top = 552.0
+margin_right = 432.0
+margin_bottom = 672.0
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
+text = "load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 504.0
+margin_bottom = 80.0
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="."]
+margin_left = 144.0
+margin_top = 720.0
+margin_right = 432.0
+margin_bottom = 840.0
+rect_min_size = Vector2( 0, 120 )
+focus_neighbour_bottom = NodePath("../Button")
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
+text = "BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+script = ExtResource( 8 )
+
+[connection signal="pressed" from="savebutton" to="." method="_on_savebutton_pressed"]
+[connection signal="pressed" from="loadbutton" to="." method="_on_loadbutton_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_Button5_pressed"]

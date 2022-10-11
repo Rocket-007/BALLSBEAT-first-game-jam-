@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Coffin-Dance-No-Copyright-_TubeRipper.com_-[AudioTrimmer.com].mp3" type="AudioStream" id=1]
+[ext_resource path="res://global_node.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/AudioStreamPlayerDelay.gd" type="Script" id=3]
+
+[node name="global_node" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+script = ExtResource( 3 )

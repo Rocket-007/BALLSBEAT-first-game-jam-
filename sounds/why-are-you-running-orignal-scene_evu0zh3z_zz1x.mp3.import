@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/why-are-you-running-orignal-scene_evu0zh3z_zz1x.mp3-bbdfb20fca0ce3cfd99114ac5f3267d1.mp3str"
+
+[deps]
+
+source_file="res://sounds/why-are-you-running-orignal-scene_evu0zh3z_zz1x.mp3"
+dest_files=[ "res://.import/why-are-you-running-orignal-scene_evu0zh3z_zz1x.mp3-bbdfb20fca0ce3cfd99114ac5f3267d1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

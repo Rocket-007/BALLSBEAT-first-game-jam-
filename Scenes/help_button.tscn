@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://help_button.gd" type="Script" id=1]
+[ext_resource path="res://Peach Days.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://styling/betterButtons.tres" type="StyleBox" id=4]
+[ext_resource path="res://styling/betterButtonsPressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://styling/betterButtonsFocus.tres" type="StyleBox" id=6]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="help_button" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.980392, 0.505882, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 87.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+margin_right = 576.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "HELP"
+align = 1
+valign = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -288.0
+margin_top = -232.5
+margin_right = 288.0
+margin_bottom = 232.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer3"]
+margin_right = 576.0
+margin_bottom = 477.0
+rect_min_size = Vector2( 0, 100 )
+theme = SubResource( 1 )
+custom_fonts/font = SubResource( 5 )
+text = "ENDLESS MODE:
+_YOU GOAL IS TO LAST AS LONG AS 
+YOU CAN WHILE PLAYING THE
+SOUNDS OF AFRICA (BEATBALLS)
+
+_CLEAR A LEVEL TO 
+RESET THE TIME BAR
+
+_IF YOU DONT COLLECT ALL 
+SOUNDS(CLEAR A LEVEL)
+BEFORE THE TIME BAR RUNS OUT,
+SORRY!"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -160.0
+margin_right = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+margin_right = 288.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 4 )
+text = "BACK"
+
+[connection signal="pressed" from="VBoxContainer/Button5" to="." method="_on_Button5_pressed"]

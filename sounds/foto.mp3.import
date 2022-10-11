@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/foto.mp3-be29ec3d35fdbb92b57dbf04c5100265.mp3str"
+
+[deps]
+
+source_file="res://sounds/foto.mp3"
+dest_files=[ "res://.import/foto.mp3-be29ec3d35fdbb92b57dbf04c5100265.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/play_button.gd" type="Script" id=1]
+[ext_resource path="res://styling/betterButtons.tres" type="StyleBox" id=2]
+[ext_resource path="res://styling/betterButtonsPressed.tres" type="StyleBox" id=3]
+[ext_resource path="res://styling/betterButtonsFocus.tres" type="StyleBox" id=4]
+[ext_resource path="res://Peach Days.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 5 )
+
+[node name="play_button" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.980392, 0.505882, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -625.0
+margin_right = 144.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 288.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+focus_neighbour_top = NodePath("../Button3")
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "ENDLESS"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+visible = false
+margin_top = 124.0
+margin_right = 288.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 0, 120 )
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "LEVELS"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 288.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 0, 120 )
+focus_neighbour_bottom = NodePath("../Button")
+custom_fonts/font = SubResource( 1 )
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "BACK"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 87.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+margin_right = 576.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+theme = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+text = "MODES"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Button3_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Chai-There-Is-God-O.mp3-2fdeca529801fd05449aca922adfe004.mp3str"
+
+[deps]
+
+source_file="res://sounds/Chai-There-Is-God-O.mp3"
+dest_files=[ "res://.import/Chai-There-Is-God-O.mp3-2fdeca529801fd05449aca922adfe004.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

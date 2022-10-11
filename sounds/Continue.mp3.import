@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Continue.mp3-a03f3101a93e9db46f1a88a093630112.mp3str"
+
+[deps]
+
+source_file="res://sounds/Continue.mp3"
+dest_files=[ "res://.import/Continue.mp3-a03f3101a93e9db46f1a88a093630112.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

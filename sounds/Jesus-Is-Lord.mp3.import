@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jesus-Is-Lord.mp3-74f32394a230d8b0a872aef2b8aeb4c3.mp3str"
+
+[deps]
+
+source_file="res://sounds/Jesus-Is-Lord.mp3"
+dest_files=[ "res://.import/Jesus-Is-Lord.mp3-74f32394a230d8b0a872aef2b8aeb4c3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

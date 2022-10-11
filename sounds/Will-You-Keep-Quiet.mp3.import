@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Will-You-Keep-Quiet.mp3-d1d127d0be16d7ae0a262d87cd18801d.mp3str"
+
+[deps]
+
+source_file="res://sounds/Will-You-Keep-Quiet.mp3"
+dest_files=[ "res://.import/Will-You-Keep-Quiet.mp3-d1d127d0be16d7ae0a262d87cd18801d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

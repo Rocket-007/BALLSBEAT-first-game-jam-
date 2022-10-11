@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ehnnn-Ehnnnn-sound-effectloop.mp3-e6ce6f08b3c45e9e7f606e7bc702f7dc.mp3str"
+
+[deps]
+
+source_file="res://Ehnnn-Ehnnnn-sound-effectloop.mp3"
+dest_files=[ "res://.import/Ehnnn-Ehnnnn-sound-effectloop.mp3-e6ce6f08b3c45e9e7f606e7bc702f7dc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

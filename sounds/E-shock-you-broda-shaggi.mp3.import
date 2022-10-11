@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/E-shock-you-broda-shaggi.mp3-417a40021066c269c020901840241689.mp3str"
+
+[deps]
+
+source_file="res://sounds/E-shock-you-broda-shaggi.mp3"
+dest_files=[ "res://.import/E-shock-you-broda-shaggi.mp3-417a40021066c269c020901840241689.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

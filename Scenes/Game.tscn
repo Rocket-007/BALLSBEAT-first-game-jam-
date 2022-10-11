@@ -1,0 +1,568 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Game.gd" type="Script" id=2]
+[ext_resource path="res://Peach Days.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://debug_overlay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/allBalls.gd" type="Script" id=5]
+[ext_resource path="res://styling/ProgBar3dGlassFG.tres" type="StyleBox" id=6]
+[ext_resource path="res://styling/ProgBar3dGlassBG.tres" type="StyleBox" id=7]
+[ext_resource path="res://sounds/Chai-There-Is-God-O.mp3" type="AudioStream" id=8]
+[ext_resource path="res://sounds/Jesus-Is-Lord.mp3" type="AudioStream" id=9]
+[ext_resource path="res://tree_shake.png" type="Texture" id=10]
+[ext_resource path="res://sounds/E-shock-you-broda-shaggi.mp3" type="AudioStream" id=11]
+[ext_resource path="res://sounds/Ehnnn-Ehnnnn-sound-effect.mp3" type="AudioStream" id=12]
+[ext_resource path="res://sounds/foto.mp3" type="AudioStream" id=13]
+[ext_resource path="res://sounds/No-be-juju-be-that.mp3" type="AudioStream" id=14]
+[ext_resource path="res://sounds/what-type-of-play-is-this.mp3" type="AudioStream" id=15]
+[ext_resource path="res://sounds/jesu-african-sound-effect.mp3" type="AudioStream" id=16]
+[ext_resource path="res://sounds/This-man.mp3" type="AudioStream" id=17]
+[ext_resource path="res://sounds/This-is-playing.mp3" type="AudioStream" id=18]
+[ext_resource path="res://sounds/why-are-you-running-orignal-scene_evu0zh3z_zz1x.mp3" type="AudioStream" id=19]
+[ext_resource path="res://sounds/Will-You-Keep-Quiet.mp3" type="AudioStream" id=20]
+[ext_resource path="res://Scripts/AudioStreamPlayer.gd" type="Script" id=21]
+[ext_resource path="res://sounds/mixkit-light-impact-on-the-ground-2070.wav" type="AudioStream" id=22]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 2
+
+[sub_resource type="Gradient" id=4]
+
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 4 )
+width = 934
+height = 694
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 10 )
+region = Rect2( 256, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 10 )
+region = Rect2( 384, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 10 )
+region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 10 )
+region = Rect2( 640, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 10 )
+region = Rect2( 768, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 10 )
+region = Rect2( 896, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 10 )
+region = Rect2( 1024, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 10 )
+region = Rect2( 1152, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 10 )
+region = Rect2( 1280, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 10 )
+region = Rect2( 1408, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 10 )
+region = Rect2( 1536, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.0784314, 0, 0, 0.435294 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 0.537255 )
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=8]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.823529, 0.290196, 0.0196078, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 30
+border_color = Color( 0.643137, 0.223529, 0.0117647, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.823529, 0.290196, 0.0196078, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 11
+border_color = Color( 0.643137, 0.223529, 0.0117647, 0.662745 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.823529, 0.290196, 0.0196078, 0 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 30
+border_color = Color( 0.643137, 0.223529, 0.0117647, 0 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.823529, 0.290196, 0.0196078, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 30
+border_color = Color( 0.643137, 0.223529, 0.0117647, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 31
+font_data = ExtResource( 3 )
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.980392, 0.505882, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="TextureRect" parent="."]
+material = SubResource( 1 )
+margin_left = 613.0
+margin_top = 514.0
+margin_right = 1547.0
+margin_bottom = 1208.0
+rect_rotation = 89.9999
+mouse_filter = 2
+texture = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="TextureRect" parent="."]
+material = SubResource( 1 )
+margin_left = -70.0
+margin_top = 117.0
+margin_right = 864.0
+margin_bottom = 811.0
+rect_rotation = -89.9999
+mouse_filter = 2
+texture = SubResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 410, 270 )
+rotation = -0.220358
+scale = Vector2( 5.13281, 5.13281 )
+frames = SubResource( 22 )
+frame = 10
+playing = true
+
+[node name="all_sounds" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 8 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 11 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 12 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 13 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 16 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 9 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 14 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 18 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 17 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 15 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer12" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 19 )
+script = ExtResource( 21 )
+
+[node name="AudioStreamPlayer13" type="AudioStreamPlayer" parent="all_sounds"]
+stream = ExtResource( 20 )
+script = ExtResource( 21 )
+
+[node name="hit_sounds" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="hit_sounds"]
+stream = ExtResource( 22 )
+script = ExtResource( 21 )
+
+[node name="Boundery" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boundery"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boundery/StaticBody2D"]
+polygon = PoolVector2Array( 0.146027, 1.08978, -0.055542, 1023.24, 575.739, 1023.64, 575.806, 0.889008, 4.44522, 1.35921, -7.64566, -16.1054, 585.949, -15.568, 586.554, 1039.5, -16.7139, 1036.47, -12.0791, -14.6275 )
+
+[node name="allBalls" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="Player" parent="allBalls" instance=ExtResource( 1 )]
+position = Vector2( 288, 608 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_right = 98.0
+margin_bottom = 100.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_top = 25.0
+margin_right = 98.0
+margin_bottom = 74.0
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "LEVEL:"
+align = 1
+valign = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+margin_left = 20.0
+margin_top = 39.0
+margin_right = 137.0
+margin_bottom = 139.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer3"]
+margin_top = 25.0
+margin_right = 117.0
+margin_bottom = 74.0
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "CLICKS:"
+align = 1
+valign = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 20.0
+margin_top = 82.0
+margin_right = 137.0
+margin_bottom = 182.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HBoxContainer4"]
+margin_top = 25.0
+margin_right = 135.0
+margin_bottom = 74.0
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "SOUNDS:"
+align = 1
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -289.0
+margin_bottom = 100.0
+mouse_filter = 2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="HBoxContainer2"]
+margin_left = 100.0
+margin_right = 189.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+theme = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "TIME:"
+valign = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 3.0
+margin_right = -5.0
+margin_bottom = 13.0
+custom_styles/fg = ExtResource( 6 )
+custom_styles/bg = ExtResource( 7 )
+max_value = 80.0
+value = 50.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar2" type="ProgressBar" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = 5.0
+margin_top = 15.0
+margin_right = -162.0
+margin_bottom = 27.0
+custom_styles/fg = ExtResource( 6 )
+custom_styles/bg = ExtResource( 7 )
+max_value = 50.0
+value = 50.0
+percent_visible = false
+
+[node name="pause" type="Panel" parent="."]
+pause_mode = 2
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 51.0
+margin_top = -258.0
+margin_right = -50.0
+margin_bottom = 275.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="pause"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -107.5
+margin_top = 36.0
+margin_right = 107.5
+margin_bottom = 121.0
+custom_fonts/font = SubResource( 8 )
+text = "PAUSED!"
+
+[node name="Button" type="Button" parent="pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = -55.5
+margin_right = 174.0
+margin_bottom = 55.5
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+text = "RESUME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="pause"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -173.5
+margin_top = -161.0
+margin_right = 174.5
+margin_bottom = -50.0
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -172.5
+margin_top = -127.5
+margin_right = 177.5
+margin_bottom = 35.5
+window_title = ""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="debug_overlay" parent="." instance=ExtResource( 4 )]
+
+[node name="failed" type="Panel" parent="."]
+pause_mode = 2
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 51.0
+margin_top = -258.0
+margin_right = -50.0
+margin_bottom = 275.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Label" type="Label" parent="failed"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -175.5
+margin_top = 37.0
+margin_right = 176.5
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 8 )
+text = "GAME OVER!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="failed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -174.0
+margin_top = -55.5
+margin_right = 174.0
+margin_bottom = 55.5
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+disabled = true
+text = "RETRY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="failed"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -173.5
+margin_top = -161.0
+margin_right = 174.5
+margin_bottom = -50.0
+custom_fonts/font = SubResource( 23 )
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 25 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/normal = SubResource( 27 )
+disabled = true
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="failed"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -237.5
+margin_right = 237.5
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 28 )
+text = "NEW HIGHSCORE!"
+align = 1
+
+[connection signal="new_highscore" from="." to="." method="_on_Game_new_highscore"]
+[connection signal="allBallsClicked" from="allBalls" to="allBalls" method="_on_allBalls_allBallsClicked"]
+[connection signal="failed" from="allBalls" to="." method="_on_allBalls_failed"]
+[connection signal="levelComplete" from="allBalls" to="allBalls" method="_on_allBalls_levelComplete"]
+[connection signal="body_entered" from="allBalls/Player" to="allBalls/Player" method="_on_Player_body_entered"]
+[connection signal="input_event" from="allBalls/Player" to="allBalls" method="_on_Player_input_event"]
+[connection signal="pressed" from="pause/Button" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="pause/Button2" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="failed/Button" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="failed/Button2" to="." method="_on_quit_pressed"]

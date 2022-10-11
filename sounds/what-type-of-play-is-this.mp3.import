@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/what-type-of-play-is-this.mp3-d755444a26e20878a7de1c232d7b03fb.mp3str"
+
+[deps]
+
+source_file="res://sounds/what-type-of-play-is-this.mp3"
+dest_files=[ "res://.import/what-type-of-play-is-this.mp3-d755444a26e20878a7de1c232d7b03fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

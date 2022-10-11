@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/jesu-african-sound-effect.mp3-6c6e0ab7caabf7c31cda7a2f4407619d.mp3str"
+
+[deps]
+
+source_file="res://sounds/jesu-african-sound-effect.mp3"
+dest_files=[ "res://.import/jesu-african-sound-effect.mp3-6c6e0ab7caabf7c31cda7a2f4407619d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

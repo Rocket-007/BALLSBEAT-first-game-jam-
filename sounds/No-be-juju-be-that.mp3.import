@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/No-be-juju-be-that.mp3-e428ba37c0453a972ef74348a6cd7f78.mp3str"
+
+[deps]
+
+source_file="res://sounds/No-be-juju-be-that.mp3"
+dest_files=[ "res://.import/No-be-juju-be-that.mp3-e428ba37c0453a972ef74348a6cd7f78.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
